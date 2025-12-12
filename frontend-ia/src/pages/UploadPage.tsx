@@ -24,7 +24,7 @@ export default function UploadPage() {
       formData.append("file", file);
       formData.append("nivel", nivel);
 
-      const API_URL = process.env.REACT_APP_BACKEND_URL;
+      const API_URL = import.meta.env.VITE_BACKEND_URL;
       const res = await fetch(`${API_URL}/resumen`, {
         method: "POST",
         body: formData,
