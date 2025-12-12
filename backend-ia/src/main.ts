@@ -8,7 +8,7 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:5173', // desarrollo local
-      'https://tu-frontend.vercel.app', // dominio de Vercel en producción
+      'https://examen-final-ia.vercel.app/', // dominio de Vercel en producción
     ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
