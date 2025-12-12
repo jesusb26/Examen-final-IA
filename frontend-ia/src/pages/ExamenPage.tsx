@@ -39,7 +39,7 @@ export default function ExamenPage() {
       return;
     }
 
-    const API_URL = process.env.REACT_APP_BACKEND_URL;
+    const API_URL = import.meta.env.VITE_BACKEND_URL;
 
     const res = await fetch(`${API_URL}/plan-estudio/examen`, {
       method: "POST",
