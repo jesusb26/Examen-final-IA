@@ -24,7 +24,8 @@ export default function UploadPage() {
       formData.append("file", file);
       formData.append("nivel", nivel);
 
-      const res = await fetch("http://localhost:3000/resumen", {
+      const API_URL = process.env.REACT_APP_BACKEND_URL;
+      const res = await fetch(`${API_URL}/resumen`, {
         method: "POST",
         body: formData,
       });
