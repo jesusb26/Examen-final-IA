@@ -4,9 +4,12 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Habilitar CORS para el frontend
+  // Habilitar CORS para el frontend en producción y desarrollo
   app.enableCors({
-    origin: 'http://localhost:5173', // Reemplaza con el puerto de tu React
+    origin: [
+      'http://localhost:5173', // desarrollo local
+      'https://tu-frontend.vercel.app', // dominio de Vercel en producción
+    ],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   });
