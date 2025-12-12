@@ -39,7 +39,9 @@ export default function ExamenPage() {
       return;
     }
 
-    const res = await fetch("http://localhost:3000/plan-estudio/examen", {
+    const API_URL = process.env.REACT_APP_BACKEND_URL;
+
+    const res = await fetch(`${API_URL}/plan-estudio/examen`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ cantidad: 20 }),
