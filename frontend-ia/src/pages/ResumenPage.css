@@ -1,0 +1,40 @@
+/* Nuevo estándar para .page-container dentro del dashboard */
+.page-container {
+  width: 100%;           /* Ocupa el 100% del área derecha */
+  min-height: 100vh;     /* Altura mínima completa */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineado arriba para que no se corte contenido largo */
+  padding: 40px;         /* Espacio interno */
+  box-sizing: border-box;
+}
+
+.card {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111827;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.resultado {
+  font-family: 'Segoe UI', sans-serif; /* O una fuente monoespaciada si prefieres */
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+  white-space: pre-wrap; /* Clave: ajusta el texto y respeta saltos */
+  word-wrap: break-word;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}

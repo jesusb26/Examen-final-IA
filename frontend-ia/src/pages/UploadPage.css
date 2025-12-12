@@ -1,0 +1,146 @@
+/* UploadPage.css */
+
+/* Nuevo estándar para .page-container dentro del dashboard */
+.page-container {
+  width: 100%;           /* Ocupa el 100% del área derecha */
+  min-height: 100vh;     /* Altura mínima completa */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineado arriba para que no se corte contenido largo */
+  padding: 40px;         /* Espacio interno */
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  
+  /* Animación suave al cargar */
+  animation: slideIn 0.4s ease-out;
+}
+
+.title {
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+/* Área de carga (Input oculto + Label estilizado) */
+.upload-area {
+  margin-bottom: 20px;
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.file-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #64748b;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.file-label:hover {
+  border-color: #4f46e5;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.file-name {
+  color: #0f172a;
+  font-weight: 600;
+  background: #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* Formulario */
+.form-group {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  background: white;
+  color: #333;
+  outline: none;
+}
+
+.select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Botón Principal */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Mensajes */
+.message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.message.error { background: #fef2f2; color: #ef4444; border: 1px solid #fecaca; }
+.message.success { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,97 @@
+/* Reutilizamos estilos base donde sea posible */
+.start-screen {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+
+/* Nuevo estándar para .page-container dentro del dashboard */
+.page-container {
+  width: 100%;           /* Ocupa el 100% del área derecha */
+  min-height: 100vh;     /* Altura mínima completa */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineado arriba para que no se corte contenido largo */
+  padding: 40px;         /* Espacio interno */
+  box-sizing: border-box;
+}
+
+.examen-content {
+  margin-top: 20px;
+}
+
+.pregunta-box {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.pregunta-titulo {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.opciones-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.opcion-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.opcion-item:hover {
+  background: #f8fafc;
+}
+
+.opcion-texto {
+  margin-left: 10px;
+}
+
+/* Colores de Feedback */
+.opcion-correcta {
+  background-color: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.opcion-incorrecta {
+  background-color: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #b91c1c;
+}
+
+.opcion-neutra {
+  opacity: 0.7; /* Opciones no seleccionadas al finalizar */
+}
+
+/* Resultado Banner */
+.resultado-banner {
+  background: #4f46e5;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mt-4 { margin-top: 2rem; }
+
+.btn-secondary {
+  width: 100%;
+  padding: 14px;
+  background: #64748b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
